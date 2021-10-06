@@ -1,4 +1,4 @@
-<h1 align="center">Chosenbot v1.0.1</h1>
+<h1 align="center">Chosenbot v1.0.2</h1>
 
   <p align="center">
     🤖 v13 Discord Bot!
