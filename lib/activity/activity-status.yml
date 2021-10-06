@@ -1,0 +1,12 @@
+# -----------------------------
+#     ACTIVITY AND STATUS
+# -----------------------------
+
+# online, idle, dnd, invisible
+status: "idle"
+activity: "you"
+# WATCHING, LISTENING, STREAMING, PLAYING
+activityType: "WATCHING"
+
+statusError: "There was an error while loading the status!"
+activityError: "There was an error while loading the activity!"
