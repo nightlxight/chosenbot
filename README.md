@@ -8,3 +8,18 @@
     <br />
   </p>
 </p>
+
+<h1 align="center">Installation</h1>
+
+**1.** Install NPM packages first.
+   ```sh
+   npm install discord.js
+   ```
+   ```sh
+   npm install @discordjs/builders @discordjs/rest discord-api-types
+   ```
+   ```sh
+   npm install js-yaml
+   ```
+
+   <img src="https://media.giphy.com/media/jpVnC65DmYeyRL4LHS/giphy.gif" width="20%">
