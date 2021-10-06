@@ -26,5 +26,6 @@ const rest = new REST({ version: '9' }).setToken(token);
 		successfulFunction();
 	} catch (error) {
         errFunction();
+		console.error(error);
 	}
 })();
