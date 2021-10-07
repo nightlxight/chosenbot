@@ -7,6 +7,7 @@ const { client_id } = require('./resources/application/client_id.json');
 const { guild_id } = require('./resources/application/guild_id.json');
 const path = require('path');
 const { activityFunction } = require('./lib/activity/activity.js');
+const { error1 } = yaml.load(fs.readFileSync(path.join(__dirname, './lib/errors/1.yml'))); // * fixed typo
 
 const { activity, activityError, activityType } = yaml.load(fs.readFileSync(path.join(__dirname, './lib/activity/activity-status.yml')));
 const { activityTypeFunction } = require('./lib/activity/activityType.js');
@@ -35,7 +36,7 @@ client.once('ready', () => {
         statusFunc();
     } catch (error) {
         let { statusError } = yaml.load(fs.readFileSync(path.join(__dirname, './lib/activity/activity-status.yml')));
-        console.warn("e");
+        console.warn(`${statusError}`);
         console.error(error);
     };
     try {
@@ -55,6 +56,7 @@ client.on('interactionCreate', async interaction => {
     try {
         await command.execute(interaction);
     } catch (error) {
+        console.warn(`${error1}`);
         console.error(error);
         return interaction.reply({ content: "❌ There was an error!", ephemeral: true });
     }
