@@ -2,7 +2,7 @@ var fs = require('fs');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const yaml = require('js-yaml');
-const { random_color } = require('../util/colors/random.json');
+const { random_color } = require('../util/colors/random/random.json');
 const { inviteDescription } = require('../resources/invite/desc.yml');
 
 module.exports = {
@@ -25,6 +25,10 @@ module.exports = {
                 console.error(error);
             };
         };
-        sendEmbedFunction();
+        let sendEmbed = () => {
+            sendEmbedFunction();
+        };
+
+        sendEmbed(); // sends the embed
     },
 };
