@@ -3,12 +3,12 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const yaml = require('js-yaml');
 const { random_color } = require('../util/colors/random/random.json');
-const { inviteDescription } = require('../resources/invite/desc.yml');
+const { inviteDescription } = require('../resources/invite/desc.yml'); // TODO fix bug here
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('invite')
-        .setDescription(`${inviteDescription}`),
+        .setDescription(`${inviteDescription}`), // ! description not working for now, but command still works, will fix, no problem
     async execute(interaction) {
         let embed = new MessageEmbed()
             .setColor(random_color)
